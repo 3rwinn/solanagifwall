@@ -8,7 +8,7 @@ import idl from "./idl.json";
 import kp from './keypair.json'
 
 // SystemProgram is a reference to the Solana runtime!
-const { SystemProgram, Keypair } = web3;
+const { SystemProgram } = web3;
 
 // Create a keypair for the account that will hold the GIF data.
 const arr = Object.values(kp._keypair.secretKey)
@@ -241,6 +241,7 @@ const App = () => {
       // Call Solana program here.
       getGifList();
     }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [walletAddress]);
 
   return (
